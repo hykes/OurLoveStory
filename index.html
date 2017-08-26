@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://www.albee.me/index3.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Our Love Story</title>
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('./Digital-7Mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="./default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./jquery.js"></script><style type="text/css" abt="234"></style>
+	<script type="text/javascript" src="./garden.js"></script>
+  <script type="text/javascript" src="./functions.js"></script>
+</head>
+<body>
+	<div id="mainDiv">
+		<div id="content" style="width: 1110px; height: 625px; margin-top: 27.5px; margin-left: 83px;">
+			<div id="code" style="margin-top: 112.5px;">
+				<span class="comments">我的爱人</span><br>
+				<span class="space comments">我会牵着你的手，走到我们满头白发的那一天</span><br>
+				<span class="space comments">我会守护你生命里的精彩，并陪伴你一路精彩下去。<br>
+				<span class="space comments">你的幸福快乐，是我一生的追求。<br>
+				<span class="space comments">我会每一天带着笑脸，和你说早安，<br>
+				<span class="space comments">我会每一晚与你道声晚安再入梦乡，<br>
+				<span class="space comments">我会带你去所有你想去的地方，<br>
+				<span class="space comments">陪你闹看你笑<br>
+				<span class="space comments">历经你生命中所有的点点滴滴。<br>
+				<span class="space comments">我期待这一生与你一起走过，<br>
+				<span class="space comments">走到尽头再回头看尽一生铅华满地，<br>
+				<span class="space comments">我期待与你慢慢变老，<br>
+				<span class="space comments">等我们老到哪儿也去不了，<br>
+				<span class="space comments">还能满载着一生的幸福快乐。<br>
+				<span class="space comments">我愿意爱你直到老去，<br>
+				<span class="space comments">我会为我们的未来撑起一片天空，<br>
+				<span class="space comments">为我们的将来担负起一生的责任，<br>
+				<span class="space comments">愿意为你去做每一件能让你开心快乐的事。<br>
+				<span class="space comments">所有我们经历的点点滴滴，<br>都是我们一辈子最美的回忆。</span> <br>
+				<br>
+			</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>_</div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words" style="position: absolute; top: 222.5px; left: 593px;">
+					<div id="messages" style="display: block;">
+						我爱你！
+						<div id="elapseClock"><span class="digit">181</span> days <span class="digit">16</span> hours <span class="digit">53</span> minutes <span class="digit">23</span> seconds</div>
+					</div>
+					<div id="loveu" style="display: block;">
+						Love u forever and ever.<br>
+						<div class="signature"> - Hykes</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<audio src="./love.mp3" id="music" autoplay="autoplay"></audio>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2017, 7, 25);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
